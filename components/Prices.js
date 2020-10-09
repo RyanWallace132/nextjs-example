@@ -25,11 +25,25 @@ class Prices extends React.Component {
                 {list}
             </ul>
             <br/>
-            <select onChange={e => this.setState({currency: e.target.value})} className="form-control">
+            <select className="select-option" onChange={e => this.setState({currency: e.target.value})} className="form-control">
                 <option value="USD" >USD</option>
                 <option value="GBP" >GBP</option>
                 <option value="EUR" >EUR</option>
             </select>
+        <style jsx>{`
+            select {
+                background-color: #f2f2f2;
+            }
+
+            select:hover{
+                cursor:pointer;
+            }
+
+            select:focus{
+                border-color: black;
+                background-color: #f2f2f2;
+            }
+        `}</style>
         </div>
         )
     }
